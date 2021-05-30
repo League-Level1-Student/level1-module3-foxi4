@@ -11,7 +11,11 @@ public class Smiley extends JLabel {
 	public static final String RED = "red";
 	public static final String GREEN = "green";
 	public static final String BLUE = "blue";
-	public static String color = BLUE;
+	//public static String color = BLUE;
+	//public static String color = YELLOW;
+	//public static String color = GREEN;
+	public static String color = RED;
+	//those that are green are the other colors you can make the smiley faces as :D
 	
 	Smiley(){
 		super(loadIcon("_01_static_smiley_blues/smiley_"+ color +".jpg"));

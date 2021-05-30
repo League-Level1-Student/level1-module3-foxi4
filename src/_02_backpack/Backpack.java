@@ -5,14 +5,22 @@ package _02_backpack;
  */
 
 public class Backpack {
-	private Pencil pencil;
-	private Ruler ruler;
-	private Textbook textbook;
-
+	private Pencil pencil = new Pencil();
+	private Ruler ruler = new Ruler();
+	private Textbook textbook = new Textbook();
+											//PLAYING MUSIC RN
 	public void packAndCheck() {
 		// Your mission is to go to school.
 		// 1. First you need to put all your supplies into your backpack - use
 		// the putInBackpack(...) methods
+		putInBackpack(pencil);
+		putInBackpack(ruler);
+		putInBackpack(textbook);
+		pencil.write("writing randomly with pencil");
+		ruler.measure();
+		textbook.read();
+		//make pencil, ruler, and textbook NOT NULL
+				//YOU CAN MAKE PENCIL, RULER, AND TEXTBOOK NOT NULL BY INITIALIZING IT
 
 		goToSchool();
 	}
@@ -41,7 +49,8 @@ public class Backpack {
 		} else {
 			description = supply.getClass().getSimpleName().toLowerCase();
 		}
-
+//how to make the supply NOT null?? hmmm
+		
 		System.out.println("You put " + description + " in your Backpack");
 	}
 
@@ -57,7 +66,7 @@ public class Backpack {
 abstract class Supply {
 	protected String name;
 }
-
+//once you make the variables not null these things happen?:
 class Pencil extends Supply {
 	Pencil() {
 		this.name = "pencil";

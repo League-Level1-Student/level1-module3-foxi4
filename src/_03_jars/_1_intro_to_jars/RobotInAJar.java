@@ -1,18 +1,20 @@
 package _03_jars._1_intro_to_jars;
-
+										//PLAYING MUSIC
 
 public class RobotInAJar {
 	
 	/* 1.   Create a String variable and initialize it to your name  */
 	
-	
+	String variable = "Lauren Kan";
 	/* If you did not make any syntax errors, there should be no red lines under your code. 
 	 * This is because the type String is part of the basic Java language that all programs  
 	 * can access without importing anything */
 	
 	
 	/* 2.   Now declare a Robot variable and create a new Robot  */
-
+	int Robot;
+	//diff variables. dk why it should be like that. maybe they should be one?
+Robot robot1 = new Robot();
 	
 	/* Even if you did not make any syntax errors, there should be a red line under the word Robot.
 	 * This is because the type Robot is not part of the basic Java language. If you want to use 
@@ -32,7 +34,7 @@ public class RobotInAJar {
 	 /* The League's Robot code has been packaged into a JAR (Java ARchive) which is like a Zip file.
 	  * JARS are used to put all the information a class (or group of classes) needs in a single
 	  * (and compressed) file. This makes is easier to share code with other users and programs.
-	  * 
+	  * 3
 	  * Go to https://github.com/jointheleague/league-jars and download the robot.jar file from GitHub
 	  */ 
 
@@ -49,6 +51,7 @@ public class RobotInAJar {
 	 * Click on the Libraries tab, and select "Add JAR".
 	 * Select the robot.jar file, then add it to the build path, apply and close.
 	 */
+//next class start on number 5
 	
 	/* 6. Now if you hover your mouse over the word Robot, you will se anew option from the "quick fix" list: 
 	 * 				Import 'Robot (org.jointheleague.graphical.robot.Robot)
