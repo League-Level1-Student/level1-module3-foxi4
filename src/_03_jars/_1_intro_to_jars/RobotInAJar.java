@@ -1,4 +1,5 @@
 package _03_jars._1_intro_to_jars;
+import org.jointheleague.graphical.robot.Robot;
 										//PLAYING MUSIC
 
 public class RobotInAJar {
@@ -9,7 +10,7 @@ public class RobotInAJar {
 	/* If you did not make any syntax errors, there should be no red lines under your code. 
 	 * This is because the type String is part of the basic Java language that all programs  
 	 * can access without importing anything */
-	
+	//
 	
 	/* 2.   Now declare a Robot variable and create a new Robot  */
 	int Robot;
@@ -41,17 +42,20 @@ Robot robot1 = new Robot();
 	 /* 4.  Put the Robot JAR into this project */
   	 /* HOW?
 	 *  Drag the robot.jar file you downloaded from GitHub and drop it onto Eclipse, onto the current Java project.
-	 */
-	
+	 */ 
+
+	//
+
 	/* 5.  Add the Robot JAR to the project Build Path */	
-	/* 
+	/*
 	 * The Robot JAR is in the project, but Eclipse can't use it until it is added to the Build Path.
 	 * HOW?
 	 * Right click anywhere on the current project. Select Build Path->Configure Build Path from the menu.
 	 * Click on the Libraries tab, and select "Add JAR".
 	 * Select the robot.jar file, then add it to the build path, apply and close.
 	 */
-//next class start on number 5
+
+
 	
 	/* 6. Now if you hover your mouse over the word Robot, you will se anew option from the "quick fix" list: 
 	 * 				Import 'Robot (org.jointheleague.graphical.robot.Robot)
@@ -61,7 +65,15 @@ Robot robot1 = new Robot();
 	
 	public void draw() {
 		/*** Write code to make your robot draw a shape here ****/
+		robot1.setSpeed(44);
+		robot1.miniaturize();
+		robot1.penDown();
+		robot1.setPenWidth(10);
+		for(int i=2;i>1;i++) {
+		robot1.setRandomPenColor();
+		robot1.move(150);
+		robot1.turn(71);
 		
-		
+		}
 	}
 }
