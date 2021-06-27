@@ -24,7 +24,7 @@ import javax.swing.JLabel;
 
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.Player;
-
+								//playing music
 public class MediaPalace {
 
 	 /*NOTE: To play mp3 files, you will need javazoom.jar in the build path. 
@@ -34,7 +34,7 @@ public class MediaPalace {
 	
 	
 	public JLabel loadImageFromTheInternet(String imageURL) throws MalformedURLException {
-		URL url = new URL(imageURL);
+		URL url = new URL("Screen Shot 2021-05-06 at 11.42.34 AM copy.png");
 		Icon icon = new ImageIcon(url);
 		return new JLabel(icon);
 	
@@ -48,7 +48,7 @@ public class MediaPalace {
 		Icon icon = new ImageIcon(imageURL);
 		return new JLabel(icon);
 	}
-	JLabel image = loadImageFromWithinProject("Screen Shot 2021-05-06 at 11.42.34 AM copy.png");
+	JLabel image = loadImageFromWithinProject("/Level1-Module3/src/_03_jars/_3_magic_box/Screen Shot 2021-05-06 at 11.42.34 AM copy.png");
 
 	/*
 	 * To use this method, pass in the full path of the image.
@@ -57,46 +57,46 @@ public class MediaPalace {
 		Icon icon = new ImageIcon(filePath);
 		return new JLabel(icon);
 	}
-	JLabel image2 = loadImageFromHardDrive("/Level1-Module3/src/_03_jars/_3_magic_box/Screen Shot 2021-05-06 at 11.42.34 AM copy.png");
 	/*
-	 * Only uncomment this method if you have javazoom.jar in the build path.
+	 * Only uncomment this method if you have javazoom.jar in the build path. //uncommented
 	 */
 	
 	 private void playMp3FromComputer(String fileName) throws JavaLayerException {
 	 FileInputStream songStream = null;
 	try {
-		songStream = new FileInputStream(fileName);
+		songStream = new FileInputStream("At My Worst (ft. Kehlani).mp3");
 	} catch (FileNotFoundException e1) {
 		// TODO Auto-generated catch block
 		e1.printStackTrace();
 	}
-	playMp3 //whut
 	 final Player playMp3 = new Player(songStream);
-	
+
 	 Thread t = new Thread() {
 	 public void run() {
 	 try {
 	 playMp3.play();
 	 } catch (JavaLayerException e) {
-	// TODO Auto-generated catch block 
+	//TODO Auto-generated catch block 
 	 e.printStackTrace();
 	 }
 	 }
 	 };
 	 t.start();
+
 	 }
 
 	/* This method will use your default mp3 player to play the song */
 	public void playMusicOnComputer(String fileName) {
-		File fileToPlay = new File(fileName);
+		File fileToPlay = new File("/Level1-Module3/src/_03_jars/_3_magic_box/At My Worst (ft. Kehlani).mp3");
 		try {
 			java.awt.Desktop.getDesktop().open(fileToPlay);
 		} catch (IOException e1) {
 			e1.printStackTrace();
+
 		}
 	}
 
-	/* If you want to use an mp3, you must first convert it to a .wav file on http://media.io */
+	/* If you want to use an mp3, you must first convert it to a .wav file on http://media.io */ //done
 	public AudioClip loadSound(String fileName) {
 		return JApplet.newAudioClip(getClass().getResource(fileName));
 	}
@@ -107,6 +107,7 @@ AudioClip audio = loadSound("At My Worst (ft. Kehlani).mp3");
 			AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new URL(soundURL));
 			Clip clip = AudioSystem.getClip();
 			clip.open(audioInputStream);
+			playSoundFromInternet("At My Worst");
 			clip.start();
 			Thread.sleep(500);
 		} catch (Exception ex) {
@@ -115,6 +116,8 @@ AudioClip audio = loadSound("At My Worst (ft. Kehlani).mp3");
 		}
 	}
 
+	
+	//minimized 
 	static void speak(String words) {
 		
 		if (System.getProperty("os.name").contains("Windows")) {

@@ -38,8 +38,7 @@ public class MagicBox extends JPanel implements Runnable, MouseListener {
 	 */
 
 	BufferedImage backgroundImage;
-
-
+//ok 
 	@Override
 	public void run() {
 		try {
@@ -76,19 +75,19 @@ public class MagicBox extends JPanel implements Runnable, MouseListener {
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
-		
+		//if mouse clicked.. etc.
 	}
 
 	@Override
 	public void mousePressed(MouseEvent e) {
 		// TODO Auto-generated method stub
-		
+		//if mouse pressed (longer click?).. etc.
 	}
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
 		// TODO Auto-generated method stub
-		
+		//if mouse is released.. etc.
 	}
 
 	@Override
