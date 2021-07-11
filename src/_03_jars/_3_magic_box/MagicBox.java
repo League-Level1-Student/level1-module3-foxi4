@@ -7,6 +7,8 @@ package _03_jars._3_magic_box;
 
 import java.awt.Dimension;
 import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
@@ -14,11 +16,12 @@ import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
-public class MagicBox extends JPanel implements Runnable, MouseListener {
+public class MagicBox extends JPanel implements Runnable, MouseListener, ActionListener {
 
 	/*
 	 * We are going to hide secrets within the magic box. 
@@ -34,11 +37,10 @@ public class MagicBox extends JPanel implements Runnable, MouseListener {
 	 *     backgroundImage.getRGB(e.getX(), e.getY()) will give you the color of the current pixel.
 	 *     
 	 *   
-	 *     
+	 *    
 	 */
 
 	BufferedImage backgroundImage;
-//ok 
 	@Override
 	public void run() {
 		try {
@@ -56,6 +58,12 @@ public class MagicBox extends JPanel implements Runnable, MouseListener {
 		frame.pack();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
+		JPanel panel = new JPanel();
+		frame.add(panel);
+		JButton button = new JButton();
+		frame.add(button);
+		button.addActionListener(this);
+		
 	}
 
 	private void loadBackgroundImage() throws Exception {
@@ -76,6 +84,7 @@ public class MagicBox extends JPanel implements Runnable, MouseListener {
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
 		//if mouse clicked.. etc.
+		
 	}
 
 	@Override
@@ -98,6 +107,12 @@ public class MagicBox extends JPanel implements Runnable, MouseListener {
 
 	@Override
 	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		
 	}
