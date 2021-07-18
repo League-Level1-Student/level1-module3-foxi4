@@ -39,6 +39,9 @@ public class MagicBox extends JPanel implements Runnable, MouseListener, ActionL
 	 *   
 	 *    
 	 */
+	JFrame frame = new JFrame("The Magic Box contains many secrets...");
+	JPanel panel = new JPanel();
+	JButton button = new JButton();
 
 	BufferedImage backgroundImage;
 	@Override
@@ -52,18 +55,17 @@ public class MagicBox extends JPanel implements Runnable, MouseListener, ActionL
 	}
 
 	private void createUI() {
-		JFrame frame = new JFrame("The Magic Box contains many secrets...");
 		frame.add(this);
 		setPreferredSize(new Dimension(backgroundImage.getWidth(), backgroundImage.getHeight()));
 		frame.pack();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setVisible(true);
-		JPanel panel = new JPanel();
 		frame.add(panel);
-		JButton button = new JButton();
 		frame.add(button);
 		button.addActionListener(this);
-		
+		frame.setVisible(true);
+		panel.add(button);
+		frame.pack();
+		frame.setTitle("Media Palace");
 	}
 
 	private void loadBackgroundImage() throws Exception {
@@ -114,6 +116,9 @@ public class MagicBox extends JPanel implements Runnable, MouseListener, ActionL
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
+		if(button == e.getSource()) {
+	
+		}
 		
 	}
 
