@@ -4,10 +4,8 @@ package _05_netflix;
  *    Level 1
  */
 
-									///music
-
 public class Movie implements Comparable<Movie> {
-
+//movie objects?: title, stars, uh
 	private String title;
 	private int stars;
 

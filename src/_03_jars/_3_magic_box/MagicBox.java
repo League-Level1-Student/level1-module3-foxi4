@@ -3,7 +3,7 @@ package _03_jars._3_magic_box;
  *    Copyright (c) The League of Amazing Programmers 2013-2019
  *    Level 1
  */
-
+//oh
 
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -22,7 +22,7 @@ import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
 public class MagicBox extends JPanel implements Runnable, MouseListener, ActionListener {
-
+//okay thats good yay
 	/*
 	 * We are going to hide secrets within the magic box. 
 	 * When the user clicks on a secret place, stuff will happen.
