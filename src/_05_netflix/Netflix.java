@@ -6,11 +6,14 @@ public class Netflix {
 		  Movie movie = new Movie("very intersting movie title", 5);
 		 movie.getRating();
 		 movie.getTicketPrice();
+		 Movie addMovie = new Movie("Luka");
+		 
 		System.out.println("The movie title is: " + movie.getTitle());
 		 System.out.println("The rating of " + movie.getTitle() + " is " + movie.getRating());
 		 System.out.println(movie.getTicketPrice());
 		 System.out.println("The second best movie is... ");
 		 System.out.println("The second movie is... ");
+
 		 ///System.out.println(movie.compareTo(otherMovie));
 		int popcorn;
 		int soda;
