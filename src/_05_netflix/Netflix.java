@@ -3,25 +3,28 @@ package _05_netflix;
 public class Netflix {
 
 	  public static void main(String[] args) throws Exception {
-		  Movie movie = new Movie("Luca", 4);
-		  Movie movie2 = new Movie("Cinderella", 3);
-		  Movie movie3 = new Movie("Demon Slayer: The Movie", 5);
-		  Movie movie4 = new Movie("Cruella", 5);
-		  Movie movie5 = new Movie("Violet Everfarden: The Movie", 5);
+		  Movie movie = new Movie("CATS", 1);
+		  Movie movie2 = new Movie("Frozen 2", 2);
+		  Movie movie3 = new Movie("Demon Slayer: The Movie", 4);
+		  Movie movie4 = new Movie("Cruella", 3);
+		  Movie movie5 = new Movie("Violet Evergarden: The Movie", 5);
 		  
-		 movie.getRating();
-		 movie.getTicketPrice();
+			 System.out.println("The movie title is: " + movie.getTitle());
+			 System.out.println(movie.getTicketPrice());
+			 
+		 NetflixQueue queue = new NetflixQueue();
+		queue.addMovie(movie);
+		 queue.addMovie(movie2);
+		 queue.addMovie(movie3);
+		queue.addMovie(movie4);
+		 queue.addMovie(movie5);
+		queue.printMovies();
 
-		 //instantiate netflxi queue
-		System.out.println("The movie title is: " + movie.getTitle());
-		 System.out.println("The rating of " + movie.getTitle() + " is " + movie.getRating());
-		 System.out.println(movie.getTicketPrice());
-		 System.out.println("The best movie is... " + movie5);
-		 System.out.println("The second movie is... " + movie3);
-System.out.println(movie2);
-System.out.println(movie4);
+	
+		 System.out.println("The best movie is... " + queue.getBestMovie());
+		 System.out.println("The second best movie is... " + queue.getMovie(1));
+		 
 
-		
 	}
 
 }
